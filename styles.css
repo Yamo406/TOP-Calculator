@@ -1,0 +1,73 @@
+:root {
+  --text-color: #fff;
+  --background-color: #1d2127;
+  --buttons-background: #282e36;
+  --buttons-foreground: #2168ee;
+  --buttons-hovered: #123a85;
+  --buttons-numbers: #2e2f38;
+  --buttons-special: #4e505f;
+}
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--background-color);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+}
+
+.app {
+  background-color: var(--background-color);
+  height: 100vh;
+  width: 40vw;
+  margin: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  border-radius: 3em;
+  border: 2px solid var(--buttons-foreground);
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.display {
+  background-color: var(--buttons-special);
+  width: 100%;
+  border-radius: 2em;
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.buttons {
+  border: none;
+  border-radius: 1em;
+  color: var(--text-color);
+  display: flex;
+  flex-flow: wrap;
+  box-sizing: border-box;
+  gap: 1em;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.buttons .numbers {
+  background-color: var(--buttons-numbers);
+}
+
+.buttons .special {
+  background-color: var(--buttons-special);
+}
+
+.buttons .colored {
+  background-color: var(--buttons-foreground);
+}
+
+.buttons button:hover {
+  background-color: var(--buttons-hovered);
+}
