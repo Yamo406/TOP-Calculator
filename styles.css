@@ -124,7 +124,7 @@ body {
 
 @media all and (min-width: 800px) {
   .calculator-container {
-    width: 35%;
+    width: 50%;
   }
   #display {
     margin: auto;
@@ -133,4 +133,3 @@ body {
     margin: -2rem 1rem 1rem 1rem;
   }
 }
- */

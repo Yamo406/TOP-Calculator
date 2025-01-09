@@ -44,5 +44,5 @@ function operate(operator, operand1, operand2) {
             break;
     }
 }
-
+// Create the functions that populate the display when you click the digit buttons. You should store the content of the display (the number) in a variable for use in the next step.
 
