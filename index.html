@@ -8,30 +8,40 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <div class="app">
-      <div class="display">0</div>
-      <div class="buttons">
-        <button class="buttons special">AC</button>
-        <button class="buttons special">+/-</button>
-        <button class="buttons special">%</button>
-        <button class="buttons colored">/</button>
-        <button class="buttons numbers">7</button>
-        <button class="buttons numbers">8</button>
-        <button class="buttons numbers">9</button>
-        <button class="buttons colored">*</button>
-        <button class="buttons numbers">4</button>
-        <button class="buttons numbers">5</button>
-        <button class="buttons numbers">6</button>
-        <button class="buttons colored">-</button>
-        <button class="buttons numbers">1</button>
-        <button class="buttons numbers">2</button>
-        <button class="buttons numbers">3</button>
-        <button class="buttons colored">+</button>
-        <button class="buttons numbers">.</button>
-        <button class="buttons numbers">0</button>
-        <button class="buttons numbers"><-</button>
-        <button class="buttons colored">=</button>
+    <form class="calculator-container">
+      <input type="text" name="display" id="display" value="0">
+      <div id="buttons-container">
+        <div class="button-row" id="row1">
+          <input type="button" class="button special" value="AC"></input>
+          <input type="button" class="button special" value="<"></input>
+          <input type="button" class="button special" value="+/-"></input>
+          <input type="button" class="button special" value="%"></input>
+          <input type="button" class="button operator" value="/"></input>
+        </div>
+        <div class="button-row" id="row2">
+          <input type="button" class="button number" value="7"></input>
+          <input type="button" class="button number" value="8"></input>
+          <input type="button" class="button number" value="9"></input>
+          <input type="button" class="button operator" value="*"></input>
+        </div>
+        <div class="button-row" id="row3">
+          <input type="button" class="button number" value="4"></input>
+          <input type="button" class="button number" value="5"></input>
+          <input type="button" class="button number" value="6"></input>
+          <input type="button" class="button operator" value="-"></input>
+        </div>
+        <div class="button-row" id="row4">
+          <input type="button" class="button number" value="1"></input>
+          <input type="button" class="button number" value="2"></input>
+          <input type="button" class="button number" value="3"></input>
+          <input type="button" class="button operator" value="+"></input>
+        </div>
+        <div class="button-row" id="row5">
+          <input type="button" class="button number" value="."></input>
+          <input type="button" class="button number" value="0"></input>
+          <input type="button" class="button operator" value="="></input>
+        </div>
       </div>
-    </div>
+    </form>
   </body>
 </html>
