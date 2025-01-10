@@ -43,7 +43,6 @@ body {
 #display {
   border: none;
   padding: 8px;
-  /* margin: 4rem 0 0 0; */
   margin: auto auto 0 auto;
   background-color: var(--button-special);
   width: 80%;
@@ -110,9 +109,6 @@ body {
 
 @media all and (max-width: 500px) {
 
-  /* #display{
-    height: 13vh;
-  } */
   .calculator-container {
     height: 65%;
   }
