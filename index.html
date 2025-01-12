@@ -5,41 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOP Calculator</title>
     <link rel="stylesheet" href="stylesImproved.css" />
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
     <form class="calculator-container">
-      <input type="text" name="display" id="display" value="0">
+      <input type="text" name="display" id="display" value="">
       <div id="buttons-container">
         <div class="button-row" id="row1">
-          <input type="button" class="button special" value="AC"></input>
-          <input type="button" class="button special" value="<"></input>
-          <input type="button" class="button special" value="+/-"></input>
-          <input type="button" class="button special" value="%"></input>
-          <input type="button" class="button operator" value="/"></input>
+          <input type="button" data-operator="AC" class="button special" value="AC"></input>
+          <input type="button" data-operator="<" class="button special" value="<"></input>
+          <input type="button" data-operator="+/-" class="button special" value="+/-"></input>
+          <input type="button" data-operator="%" class="button special" value="%"></input>
+          <input type="button" data-operator="/" class="button operator" value="/"></input>
         </div>
         <div class="button-row" id="row2">
-          <input type="button" class="button number" value="7"></input>
-          <input type="button" class="button number" value="8"></input>
-          <input type="button" class="button number" value="9"></input>
-          <input type="button" class="button operator" value="x"></input>
+          <input type="button" data-number="7" class="button number" value="7"></input>
+          <input type="button" data-number="8" class="button number" value="8"></input>
+          <input type="button" data-number="9" class="button number" value="9"></input>
+          <input type="button" data-operator="x" class="button operator" value="x"></input>
         </div>
         <div class="button-row" id="row3">
-          <input type="button" class="button number" value="4"></input>
-          <input type="button" class="button number" value="5"></input>
-          <input type="button" class="button number" value="6"></input>
-          <input type="button" class="button operator" value="-"></input>
+          <input type="button" data-number="4" class="button number" value="4"></input>
+          <input type="button" data-number="5" class="button number" value="5"></input>
+          <input type="button" data-number="6" class="button number" value="6"></input>
+          <input type="button" data-operator="-" class="button operator" value="-"></input>
         </div>
         <div class="button-row" id="row4">
-          <input type="button" class="button number" value="1"></input>
-          <input type="button" class="button number" value="2"></input>
-          <input type="button" class="button number" value="3"></input>
-          <input type="button" class="button operator" value="+"></input>
+          <input type="button" data-number="1" class="button number" value="1"></input>
+          <input type="button" data-number="2" class="button number" value="2"></input>
+          <input type="button" data-number="3" class="button number" value="3"></input>
+          <input type="button" data-operator="+" class="button operator" value="+"></input>
         </div>
         <div class="button-row" id="row5">
-          <input type="button" class="button number" value="."></input>
-          <input type="button" class="button number" value="0"></input>
-          <input type="button" class="button operator" value="="></input>
+          <input type="button" data-number="." class="button number" value="."></input>
+          <input type="button" data-number="0" class="button number" value="0"></input>
+          <input type="button" data-operator="=" class="button operator" value="="></input>
         </div>
       </div>
     </form>
