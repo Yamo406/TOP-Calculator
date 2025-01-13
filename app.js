@@ -3,26 +3,36 @@ const display = document.querySelector("#display");
 const buttonsContainer = document.querySelector("#buttons-container");
 
 // Variables
-let operand = 0,
-	result = 0;
+let operand1 = null,
+	currentOperator = null;
+let operand = 0;
 let operator = ["+", "-", "x", "/", "="];
 let pressedPercentage = false;
 
 // Functions
 function add(operand1, operand2) {
-	return operand1 + operand2;
+	result = operand1 + operand2;
+	return result;
 }
 
 function subtract(operand1, operand2) {
-	return operand1 - operand2;
+	result = operand1 - operand2;
+	return result;
 }
 
 function multiply(operand1, operand2) {
-	return operand1 * operand2;
+	result = operand1 * operand2;
+	return result;
 }
 
 function divide(operand1, operand2) {
-	return operand1 / operand2;
+  if (operand2 === 0) {
+    result = 0;
+    alert(`Invalid operation Dividing 0/0`)
+    return result;
+  }
+	result = operand1 / operand2;
+	return result;
 }
 
 function operate(operator, operand1, operand2) {
@@ -72,17 +82,23 @@ function toggleNegative() {
 }
 
 function percentage() {
-	//needs to be toggleable
 	if (!pressedPercentage) {
 		if (display.value.contains(".")) {
 			display.value = "%" + display.value / 100;
 		}
-		display.value = "%" + display.value;
+		display.value = "%" + display.value / 100;
 	} else {
-		display.value = display.value.substr(1, display.value.length);
+		display.value = display.value.substr(1, display.value.length) * 100;
 	}
-
 	pressedPercentage = !pressedPercentage;
+}
+
+function checkOperandAndOperator() {
+	if (operand1 === null) {
+		operand1 = operand;
+		currentOperator = operatorValue;
+		clearDisplay();
+	}
 }
 
 // event delegation helper function
@@ -228,19 +244,44 @@ function handleOperator(e) {
 			break;
 
 		case "/":
-			// function to divide
+			if (operand1 === null) {
+				operand1 = operand;
+				currentOperator = operatorValue;
+				clearDisplay();
+			}
 			break;
+
 		case "x":
-			// function to multiply
+			if (operand1 === null) {
+				operand1 = operand;
+				currentOperator = operatorValue;
+				clearDisplay();
+			}
 			break;
+
 		case "-":
-			// function to subtract
+			if (operand1 === null) {
+				operand1 = operand;
+				currentOperator = operatorValue;
+				clearDisplay();
+			}
 			break;
+
 		case "+":
-			// function to add
+			if (operand1 === null) {
+				operand1 = operand;
+				currentOperator = operatorValue;
+				clearDisplay();
+			}
 			break;
+
 		case "=":
-			// function to operate
+			if (operand1 !== null && currentOperator !== null) {
+				const result = operate(currentOperator, operand1, operand);
+				display.value = result;
+				operand1 = null;
+				currentOperator = null;
+			}
 			break;
 
 		default:
