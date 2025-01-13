@@ -83,13 +83,14 @@ function toggleNegative() {
 
 function percentage() {
 	if (!pressedPercentage) {
-		if (display.value.contains(".")) {
-			display.value = "%" + display.value / 100;
-		}
-		display.value = "%" + display.value / 100;
+		// Convert to percentage
+		display.value = (Number(display.value) / 100).toFixed(2);
 	} else {
-		display.value = display.value.substr(1, display.value.length) * 100;
+		// Convert back from percentage
+		display.value = (Number(display.value) * 100).toFixed(2);
 	}
+	// Update operand to match display
+	operand = Number(display.value);
 	pressedPercentage = !pressedPercentage;
 }
 
